@@ -1,0 +1,14 @@
+{
+  "name": "nomad-spot",
+  "version": "1.0.0",
+  "description": "Landing page for nomad-spot",
+  "main": "script.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
+  },
+  "author": "Joanna",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
