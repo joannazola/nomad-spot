@@ -2,3 +2,14 @@
   background-color: $color-light-blue-1;
   padding: 20rem 20rem;
 }
+
+.section-features {
+  padding: 10rem 0;
+  background: linear-gradient(
+      rgba($color-dark-blue, 0.8),
+      rgba($color-light-blue, 0.2)
+    ),
+    url("../img/fog-2.jpg");
+  background-size: cover;
+  background-position: top;
+}
