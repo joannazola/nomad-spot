@@ -41,6 +41,13 @@
       background-color: $color-white;
     }
   }
+  &--blue {
+    background-color: $color-secondary;
+    color: $color-white;
+    &::after {
+      background-color: $color-secondary;
+    }
+  }
   &--animated {
     animation: moveBottom 0.5s ease-in 0.5s;
     /* Zanim animacja zacznie sie - button jest niewidoczny */

@@ -1,0 +1,166 @@
+.card {
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  position: relative;
+  height: 55rem;
+
+  &__side {
+    background-color: orangered;
+    height: 55rem;
+    transition: all 0.8s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 1.5rem 4rem rgba($color-black, 0.2);
+    backface-visibility: hidden;
+    // Hide back part of the element
+    &--front {
+      background-color: $color-white;
+    }
+    &--back {
+      transform: rotateY(180deg);
+      &-1 {
+        background: linear-gradient(
+          to right bottom,
+          $color-light-blue,
+          $color-primary
+        );
+      }
+      &-2 {
+        background: linear-gradient(
+          to right bottom,
+          $color-primary,
+          $color-pink-sunset
+        );
+      }
+      &-3 {
+        background: linear-gradient(
+          to right bottom,
+          $color-pink-sunset,
+          $color-dark-blue
+        );
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+  }
+  &:hover &__side--back {
+    transform: rotateY(0);
+  }
+  //Styling
+  &__picture {
+    background-size: cover;
+    background-position: center;
+    height: 40%;
+    &--1 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-light-blue, 0.4),
+          rgba($color-primary, 0.5)
+        ),
+        url(../img/offer-1.jpg);
+    }
+    &--2 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-primary, 0.4),
+          rgba($color-pink-sunset, 0.5)
+        ),
+        url(../img/offer-2.jpg);
+    }
+    &--3 {
+      background-image: linear-gradient(
+          to right bottom,
+          rgba($color-pink-sunset, 0.4),
+          rgba($color-dark-blue, 0.5)
+        ),
+        url(../img/offer-3.jpg);
+    }
+  }
+
+  &__heading {
+    font-size: 2.8rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    text-align: right;
+    color: $color-white;
+    position: absolute;
+    top: 22%;
+    right: 2%;
+    width: 75%;
+  }
+
+  &__heading-span {
+    padding: 0.4rem 1rem;
+    box-decoration-break: clone;
+    &--1 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-light-blue, 0.85),
+        rgba($color-primary, 0.85)
+      );
+    }
+    &--2 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-primary, 0.85),
+        rgba($color-pink-sunset, 0.85)
+      );
+    }
+    &--3 {
+      background-image: linear-gradient(
+        to right bottom,
+        rgba($color-pink-sunset, 0.85),
+        rgba($color-dark-blue, 0.85)
+      );
+    }
+  }
+  &__details {
+    padding: 3rem;
+    ul {
+      list-style: none;
+      width: 80%;
+      margin: 0 auto;
+      li {
+        text-align: center;
+        font-size: 1.5rem;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+
+        &:not(:last-child) {
+          border-bottom: 0.1rem solid $color-gray-dark;
+        }
+      }
+    }
+  }
+
+  //Back styling
+  &__cta {
+    position: absolute;
+    text-align: center;
+    width: 90%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.6rem;
+    text-transform: uppercase;
+  }
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+  }
+}
