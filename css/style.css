@@ -117,7 +117,13 @@ body {
 .u-margin-top-big {
   margin-top: 8rem; }
 
-.btn:link, .btn:visited {
+.u-margin-top-medium {
+  margin-top: 4rem; }
+
+.u-margin-top-small {
+  margin-top: 2rem; }
+
+.btn, .btn:link, .btn:visited {
   font-size: 1.6rem;
   text-transform: uppercase;
   text-decoration: none;
@@ -125,7 +131,9 @@ body {
   display: inline-block;
   border-radius: 12rem;
   transition: all 0.2s;
-  position: relative; }
+  position: relative;
+  border: none;
+  cursor: pointer; }
 
 .btn:hover {
   transform: translateY(-0.3rem);
@@ -167,7 +175,7 @@ body {
   /* Zanim animacja zacznie sie - button jest niewidoczny */
   animation-fill-mode: backwards; }
 
-.btn-text:link, .btn-text:visited {
+.btn-text, .btn-text:link, .btn-text:visited {
   color: #fff;
   font-size: 1.6rem;
   background-color: #406882;
@@ -328,6 +336,82 @@ body {
   .feature-box:hover {
     transform: translateY(-1.5rem) scale(1.05); }
 
+.form__group:not(:last-child) {
+  margin-bottom: 2rem; }
+
+.form__input {
+  font-size: 1.5rem;
+  font-family: inherit;
+  color: inherit;
+  padding: 1.5rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-bottom: 0.3rem solid transparent;
+  width: 90%;
+  display: block;
+  transition: all 0.4s; }
+  .form__input:focus {
+    outline: none;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+    border-bottom: 3px solid #6998ab; }
+  .form__input:focus:invalid {
+    border-bottom: 3px solid #992424; }
+  .form__input::-webkit-input-placeholder {
+    color: #1a374d; }
+
+.form__label {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin-left: 2rem;
+  margin-top: 0.7rem;
+  display: block;
+  transition: all 0.4s; }
+
+.form__input:placeholder-shown + .form__label {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-4rem); }
+
+.form__radio-group {
+  width: 45%;
+  display: inline-block; }
+
+.form__radio-input {
+  display: none; }
+
+.form__radio-label {
+  font-size: 1.6rem;
+  cursor: pointer;
+  position: relative;
+  padding-left: 4rem; }
+
+.form__radio-button {
+  width: 2.4rem;
+  height: 2.4rem;
+  border: 0.3rem solid #406882;
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: -0.2rem; }
+  .form__radio-button::after {
+    content: "";
+    display: block;
+    height: 1.2rem;
+    width: 1.2rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #406882;
+    opacity: 0;
+    transition: opacity 0.4s; }
+
+.form__radio-input:checked ~ .form__radio-label .form__radio-button::after {
+  opacity: 1; }
+
 .story {
   width: 75%;
   margin: 0 auto;
@@ -427,5 +511,19 @@ body {
   padding: 20rem 20rem; }
 
 .section-stories {
-  padding: 15rem 0;
+  padding: 10rem 0;
   position: relative; }
+
+.section-book {
+  padding: 10rem 0;
+  background-color: #e6eaec; }
+
+.book {
+  background-image: linear-gradient(90deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.8) 50%, transparent 50%), url(../img/nat-10.jpg);
+  background-size: 120%;
+  border-radius: 1rem;
+  box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.4);
+  height: 50rem; }
+  .book__form {
+    width: 50%;
+    padding: 6rem; }
