@@ -10,25 +10,36 @@
     outline-offset: 1.6rem;
 
     &--p1 {
-      left: 0;
-      top: -4rem;
+      left: 10%;
+      transform: translateY(100%);
+
+      &:hover {
+        z-index: 20;
+        transform: scale(1.5) translateY(50%);
+      }
     }
     &--p2 {
-      right: 0;
-      top: 2rem;
+      left: 10%;
+      top: -50%;
+
+      &:hover {
+        z-index: 20;
+        transform: scale(1.5);
+      }
     }
     &--p3 {
-      left: 25%;
-      top: 10rem;
+      left: 10%;
+      transform: translateY(220%);
+      &:hover {
+        z-index: 20;
+        transform: scale(1.5) translateY(50%);
+      }
     }
-    &:hover {
-      outline: 1.5rem solid $color-dark-blue;
-      transform: scale(1.05);
-      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
-      z-index: 20;
-    }
-  }
-  &:hover &__photo:not(:hover) {
-    transform: scale(0.9);
+    // &:hover {
+    // outline: 1.5rem solid $color-dark-blue;
+    // transform: scale(1.05);
+    // box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5);
+
+    // }
   }
 }

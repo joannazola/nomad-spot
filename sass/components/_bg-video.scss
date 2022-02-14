@@ -5,13 +5,12 @@
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: 0.55;
-  filter: blur(0.01rem) brightness(60%);
+  opacity: 0.35;
   overflow: hidden;
 
-  &__conten {
+  &__content {
     height: 100%;
     width: 100%;
-    object-fit: 100%;
+    object-fit: cover;
   }
 }

@@ -1,6 +1,13 @@
 .section-about {
   background-color: $color-light-blue-1;
-  padding: 20rem 20rem;
+  padding: 30rem 20rem;
+
+  @include respond(phone) {
+    padding: 8rem 2rem;
+  }
+  @include respond(tab-port) {
+    padding: 16rem 4rem;
+  }
 }
 
 .section-features {
