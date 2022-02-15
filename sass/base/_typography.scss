@@ -44,7 +44,7 @@ body {
 }
 
 .heading-secondary {
-  font-size: 3rem;
+  font-size: 3.2rem;
   text-transform: uppercase;
   font-weight: 500;
   display: inline-block;
@@ -59,6 +59,15 @@ body {
   line-height: 1.2;
   transition: all 0.2s;
 
+  @include respond(tab-port) {
+    font-size: 3rem;
+    text-align: center;
+  }
+  @include respond(phone) {
+    font-size: 2.8rem;
+    text-align: center;
+  }
+
   &:hover {
     transform: skewX(1deg);
     text-shadow: 0.5rem 1rem 2rem rgba($color-dark-blue, 0.2);
@@ -69,11 +78,19 @@ body {
   font-size: 1.8rem;
   font-weight: 500;
   text-transform: uppercase;
+
+  @include respond(phone) {
+    text-align: center;
+  }
 }
 
 .paragraph {
   font-size: 1.6rem;
   &:not(:last-child) {
     margin-bottom: 3rem;
+
+    @include respond(phone) {
+      text-align: center;
+    }
   }
 }

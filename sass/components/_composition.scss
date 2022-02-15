@@ -8,6 +8,12 @@
     z-index: 10;
     transition: all 0.2s;
     outline-offset: 1.6rem;
+    @include respond(tab-port) {
+      display: none;
+    }
+    @include respond(phone) {
+      display: none;
+    }
 
     &--p1 {
       left: 10%;
@@ -32,7 +38,7 @@
       transform: translateY(220%);
       &:hover {
         z-index: 20;
-        transform: scale(1.5) translateY(50%);
+        transform: scale(1.5) translateY(150%);
       }
     }
     // &:hover {
